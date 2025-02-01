@@ -1,4 +1,12 @@
-INSERT INTO department (DepartmentID, DepartmentName, Location) VALUES  
+create table deperment(D_id number(10) primary key, D_Name varchar2(20), Location varchar2(20)); 
+create table manager(M_id number(10) primary key, M_name varchar2(20));
+
+
+create table employee(E_id number(10) primary key, E_Name varchar2(20), Salary number(10), j_date date, D_id number(10), M_id number(10), 
+constraint fk3 foregin key(D_id) references deperment(D_id), 
+constraint fk2 foregin key(M_id) references manager(M_id));
+
+INSERT INTO depertment (DepartmentID, DepartmentName, Location) VALUES  
 (1, 'Human Resources', 'New York'),  
 (2, 'Finance', 'Chicago'),  
 (3, 'Marketing', 'Los Angeles'),  
