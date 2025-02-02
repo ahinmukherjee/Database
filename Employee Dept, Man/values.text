@@ -1,0 +1,100 @@
+
+create table deparment(D_id number(10) primary key, D_Name varchar2(40), Location varchar2(20)); 
+create table Managers(M_id number(10) primary key, M_name varchar2(40));
+
+create table worker(E_id number(10) primary key, E_Name varchar2(50), Salary number(10), j_date date, D_id number(10), M_id number(10), 
+constraint fk4 foreign key(D_id) references deparment(D_id), 
+constraint fk5 foreign key(M_id) references Managers(M_id));
+
+insert into  deparment(D_id, D_Name, Location)with abc as 
+(select 1, 'Human Resources', 'New York' from dual union all  
+select 2, 'Finance', 'Chicago' from dual union all  
+select 3, 'Marketing', 'Los Angeles' from dual union all  
+select 4, 'Sales', 'Houston' from dual union all  
+select 5, 'IT', 'San Francisco' from dual union all  
+select 6, 'Customer Support', 'Seattle' from dual union all  
+select 7, 'Research & Development', 'Boston' from dual union all  
+select 8, 'Operations', 'Denver' from dual union all  
+select 9, 'Legal', 'Washington D.C.' from dual union all  
+select 10, 'Procurement', 'Miami' from dual union all  
+select 11, 'Quality Assurance', 'Dallas' from dual union all  
+select 12, 'Training & Development', 'Phoenix' from dual union all  
+select 13, 'Public Relations', 'Atlanta' from dual union all  
+select 14, 'Security', 'Las Vegas' from dual union all  
+select 15, 'Administration', 'Philadelphia' from dual union all  
+select 16, 'Data Science', 'Austin' from dual union all  
+select 17, 'Logistics', 'Detroit' from dual union all  
+select 18, 'Business Intelligence', 'Charlotte' from dual union all  
+select 19, 'Healthcare Services', 'San Diego' from dual union all  
+select 20, 'Content Management', 'Orlando' from dual union all  
+select 21, 'Product Management', 'Portland' from dual union all  
+select 22, 'Compliance', 'Minneapolis' from dual union all  
+select 23, 'Strategy & Planning', 'Nashville' from dual union all  
+select 24, 'Event Management', 'New Orleans' from dual union all  
+select 25, 'Customer Relations', 'Kansas City' from dual)
+
+select * from abc;
+select * from deparment;
+
+
+insert into Managers(M_id, M_name)with def as   
+(select 1, 'Alice Johnson' from dual union all 
+select 2, 'Robert Smith' from dual union all  
+select 3, 'Emily Davis' from dual union all 
+select 4, 'Michael Brown' from dual union al 
+select 5, 'Sophia Wilson from dual union all 
+select 6, 'James Anderson' from dual union all
+select 7, 'Olivia Martinez' from dual union all   
+select 8, 'William Taylor'  from dual union all  
+select 9, 'Isabella Thomas' from dual union all  
+select 10, 'Benjamin Harris' from dual union all  
+select 11, 'Charlotte White' from dual union all  
+select 12, 'Daniel Lewis' from dual union all  
+select 13, 'Mia Walker' from dual union all  
+select 14, 'David Hall' from dual union all  
+select 15, 'Evelyn Allen' from dual union all  
+select 16, 'Christopher Scott' from dual union all  
+select 17, 'Amelia Adams' from dual union all  
+select 18, 'Matthew King' from dual union all  
+select 19, 'Ava Rodriguez' from dual union all  
+select 20, 'Joseph Green' from dual union all 
+select 21, 'Sophia Carter' from dual union all 
+select 22, 'Henry Perez' from dual union all  
+select 23, 'Victoria Wright' from dual union all  
+select 24, 'Jackson Hill' from dual union all  
+select 25, 'Madison Baker' from dual)
+
+select * from def;
+select * from Managers;
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO employee (EmployeeID, EmployeeName, Salary, JoiningDate, DepartmentID, ManagerID) VALUES  
+(1, 'John Doe', 60000, '2023-01-15', 1, 1),  
+(2, 'Emma Watson', 75000, '2022-05-10', 2, 2),  
+(3, 'Liam Johnson', 50000, '2021-08-20', 3, 3),  
+(4, 'Sophia Roberts', 80000, '2020-07-12', 4, 4),  
+(5, 'Mason Brown', 55000, '2019-09-25', 5, 5),  
+(6, 'Olivia Wilson', 70000, '2018-11-05', 6, 6),  
+(7, 'Noah Davis', 65000, '2017-04-30', 7, 7),  
+(8, 'Ava Martinez', 72000, '2016-03-18', 8, 8),  
+(9, 'Elijah Taylor', 68000, '2015-12-22', 9, 9),  
+(10, 'Isabella Thomas', 62000, '2014-06-10', 10, 10),  
+(11, 'James Lee', 75000, '2013-09-15', 11, 11),  
+(12, 'Charlotte White', 54000, '2012-02-14', 12, 12),  
+(13, 'Lucas Harris', 73000, '2011-07-19', 13, 13),  
+(14, 'Mia Walker', 60000, '2010-11-03', 14, 14),  
+(15, 'William Hall', 77000, '2009-08-08', 15, 15),  
+(16, 'Evelyn Allen', 58000, '2022-06-21', 1, 2),  
+(17, 'Alexander King', 71000, '2021-04-12', 2, 3),  
+(18, 'Harper Scott', 53000, '2020-10-05', 3, 4),  
+(19, 'Henry Green', 69000, '2019-12-15', 4, 5),  
+(20, 'Amelia Adams', 64000, '2018-07-30', 5, 6);  
