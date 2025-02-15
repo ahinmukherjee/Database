@@ -37,12 +37,13 @@ select * from abc;
 select * from deparment;
 
 
-insert into Managers(M_id, M_name)with def as   
-(select 1, 'Alice Johnson' from dual union all 
+insert into Managers(M_id, M_name) 
+with def as(
+select 1, 'Alice Johnson' from dual union all 
 select 2, 'Robert Smith' from dual union all  
 select 3, 'Emily Davis' from dual union all 
-select 4, 'Michael Brown' from dual union al 
-select 5, 'Sophia Wilson from dual union all 
+select 4, 'Michael Brown' from dual union all 
+select 5, 'Sophia Wilson' from dual union all 
 select 6, 'James Anderson' from dual union all
 select 7, 'Olivia Martinez' from dual union all   
 select 8, 'William Taylor'  from dual union all  
@@ -68,33 +69,28 @@ select * from def;
 select * from Managers;
 
 
+insert into worker values(1, 'John Doe', 60000, '15-Jan2023', 1, 1); 
+insert into worker values(2, 'Emma Watson', 75000, '10-Jan2022', 2, 2); 
+insert into worker values(3, 'Liam Johnson', 50000, '08-Aug2021', 3, 3);  
+insert into worker values(4, 'Sophia Roberts', 80000, '21-Sep-2020', 4, 4);  
+insert into worker values(5, 'Mason Brown', 55000, '20-Oct-2019', 5, 5);  
+insert into worker values(6, 'Olivia Wilson', 70000, '01-Nov-2018', 6, 4);  
+insert into worker values(7, 'Noah Davis', 65000, '20-April-2017', 7, 7);  
+insert into worker values(8, 'Ava Martinez', 72000, '19-Mar2016', 8, 8);  
+insert into worker values(9, 'Elijah Taylor', 68000, '22-Dec-2015', 8, 9);
+insert into worker values(10, 'Isabella Thomas', 62000, '01-Jun-2014', 10, 10);  
+insert into worker values(11, 'James Lee', 75000, '14-Sep-2013', 11, 11);  
+insert into worker values(12, 'Charlotte White', 54000, '11-Feb-2012', 12, 12);  
+insert into worker values(13, 'Lucas Harris', 73000, '11-July-2011', 13, 13);  
+insert into worker values(14, 'Mia Walker', 60000, '05-Oct-2010', 14, 14); 
+insert into worker values(15, 'William Hall', 77000, '09-Aug-2009', 15, 15);  
+insert into worker values(16, 'Evelyn Allen', 58000, '21-Jan-2022', 1, 2); 
+insert into worker values(17, 'Alexander King', 71000, '12-April-2021', 2, 3);  
+insert into worker values(18, 'Harper Scott', 53000, '09-May-2020', 3, 4); 
+insert into worker values(19, 'Henry Green', 69000, '22-Dec-2019', 4, 5);  
+insert into worker values(20, 'Amelia Adams', 64000, '30-Sep-2018', 5, 6);  
 
+select * from worker;
 
-
-
-
-
-
-
-
-INSERT INTO employee (EmployeeID, EmployeeName, Salary, JoiningDate, DepartmentID, ManagerID) VALUES  
-(1, 'John Doe', 60000, '2023-01-15', 1, 1),  
-(2, 'Emma Watson', 75000, '2022-05-10', 2, 2),  
-(3, 'Liam Johnson', 50000, '2021-08-20', 3, 3),  
-(4, 'Sophia Roberts', 80000, '2020-07-12', 4, 4),  
-(5, 'Mason Brown', 55000, '2019-09-25', 5, 5),  
-(6, 'Olivia Wilson', 70000, '2018-11-05', 6, 6),  
-(7, 'Noah Davis', 65000, '2017-04-30', 7, 7),  
-(8, 'Ava Martinez', 72000, '2016-03-18', 8, 8),  
-(9, 'Elijah Taylor', 68000, '2015-12-22', 9, 9),  
-(10, 'Isabella Thomas', 62000, '2014-06-10', 10, 10),  
-(11, 'James Lee', 75000, '2013-09-15', 11, 11),  
-(12, 'Charlotte White', 54000, '2012-02-14', 12, 12),  
-(13, 'Lucas Harris', 73000, '2011-07-19', 13, 13),  
-(14, 'Mia Walker', 60000, '2010-11-03', 14, 14),  
-(15, 'William Hall', 77000, '2009-08-08', 15, 15),  
-(16, 'Evelyn Allen', 58000, '2022-06-21', 1, 2),  
-(17, 'Alexander King', 71000, '2021-04-12', 2, 3),  
-(18, 'Harper Scott', 53000, '2020-10-05', 3, 4),  
-(19, 'Henry Green', 69000, '2019-12-15', 4, 5),  
-(20, 'Amelia Adams', 64000, '2018-07-30', 5, 6);  
+selcet * from worker where E_Name like 'a%' or'A%';
+selcet * from worker where j_date>01-jan-2010;
